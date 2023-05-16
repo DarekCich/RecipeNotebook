@@ -46,7 +46,9 @@ const MyComponent = ({id}) => {
         </Head>
         <div className={"FileEditor"}>
             <div className={"navbar"}>
-                <a href="/home">{"⇦"}</a>
+                <Link href={"/home"} className={"homeHref"} as={"⇦"}>
+                    <a >{"⇦"}</a>
+                </Link>
                 <div>{filename}</div>
                 <button className={"SaveButton"} onClick={async () => {
                     await saveValue(value, name)

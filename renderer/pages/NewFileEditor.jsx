@@ -9,7 +9,7 @@ const modules = {
         [{header: [1, 2, 3, 4, 5, 6, false]}],
         [{font: []}],
         [{size: []}],
-        ["bold", "italic", "underline", "strike", "blockqoute"],
+        ["bold", "italic", "underline", "strike"],
         [
             {list: "ordered"},
             {list: "bullet"},
@@ -28,9 +28,12 @@ const MyComponent = (props) => {
         <Head>
             <title></title>
         </Head>
+
         <div className={"FileEditor"}>
             <div className={"navbar"}>
-                <a href="/home">{"⇦"}</a>
+                <Link href={"/home"} className={"homeHref"} as={"⇦"}>
+                    <a >{"⇦"}</a>
+                </Link>
                 <input value={valueOfInput} className={"nameInput"}  onChange={(e) => setValueOfInput(e.target.value)}/>
                 <button className={"SaveButton"} onClick={async () => {
                     await saveValue(value, valueOfInput)

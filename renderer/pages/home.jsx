@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 import { getFiles } from "../../main/helpers/posts"
+import Link from "next/link";
 
 
 
@@ -20,27 +20,38 @@ function  Home() {
             add();
         }
     });
-  return (
+    return (
 
-    <React.Fragment>
-      <Head>
-        <title>DWR Notes Pro</title>
-      </Head>
-      <div>
-          <nav >
-              <div className={"fileTitle"}>Pliki: </div>
-              <div className={"files"}>
-                  {
-                      value.map((x,index)=>(<li key={index}> <a href={`/editor/${x}`} className={"homeHref"}><div className={"temp"}>
-                          {x}
-                      </div> </a></li>))
-                  }
-                  <li  className={"NewFileFrame"}> <a href={`/NewFileEditor`} className={"NewFile"}> + Add New File </a></li>
-              </div>
-          </nav>
-      </div>
-    </React.Fragment>
-  );
+        <React.Fragment>
+            <Head>
+                <title>DWR Notes Pro</title>
+            </Head>
+            <div>
+                <nav >
+                    <Link href={"/home"} className={"homeHref"} as={"⇦"}>
+                        <a >{"⇦"}</a>
+                    </Link>
+                    <div className={"fileTitle"}>Pliki: </div>
+                    <div className={"files"}>
+                        <ul>
+                            {value.map((x,index)=>(
+                                <li key={index}>
+                                    <Link href={`editor/${x}`} className={"homeHref"}>
+                                        <a className={"temp"}>{x}</a>
+                                    </Link>
+                                </li>))
+                            }
+                            <li  className={"NewFileFrame"}>
+                                <Link href={`/NewFileEditor`} className={"NewFile"}>
+                                    <a className={"temp"}>New file</a>
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </React.Fragment>
+    );
 }
 
 export default Home;

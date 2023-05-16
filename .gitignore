@@ -3,12 +3,9 @@ node_modules
 .next
 app
 dist
-/files/
 files
 /.vscode/
 /.idea
-.idea/appName.iml
-.idea/appName.iml
 .idea/appName.iml
 files/testdasd
 files/trs

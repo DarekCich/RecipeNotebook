@@ -2,8 +2,8 @@ import React, {useEffect, useRef, useState} from 'react';
 import Head from 'next/head';
 import { getFiles } from "../../main/helpers/posts"
 import Link from "next/link";
-
-
+import styles from '../Style/home.module.css'
+import Checkbox from '../components/Checkbox';
 
 function  Home() {
     const [value, setValue] = useState([]);
@@ -28,16 +28,16 @@ function  Home() {
             </Head>
             <div>
                 <nav >
-                    <Link href={"/home"} className={"homeHref"} as={"⇦"}>
-                        <a >{"⇦"}</a>
-                    </Link>
+                    <Checkbox/>
                     <div className={"fileTitle"}>Pliki: </div>
                     <div className={"files"}>
                         <ul>
                             {value.map((x,index)=>(
                                 <li key={index}>
                                     <Link href={`editor/${x}`} className={"homeHref"}>
-                                        <a className={"temp"}>{x}</a>
+                                        <a className={"temp"}>
+                                            <div>{x}</div>
+                                        </a>
                                     </Link>
                                 </li>))
                             }

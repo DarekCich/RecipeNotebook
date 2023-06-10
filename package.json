@@ -7,6 +7,7 @@
   "main": "app/background.js",
   "scripts": {
     "dev": "nextron",
+    "start": "nextron",
     "build": "nextron build",
     "postinstall": "electron-builder install-app-deps"
   },
@@ -18,12 +19,14 @@
     "react-router-dom": "^6.11.1"
   },
   "devDependencies": {
+    "css-loader": "^6.8.1",
     "electron": "^21.3.3",
     "electron-builder": "^23.6.0",
     "next": "^12.3.4",
     "nextron": "^8.5.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "style-loader": "^3.3.3"
   },
   "browser": {
     "os": false,

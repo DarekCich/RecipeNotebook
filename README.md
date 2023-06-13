@@ -26,7 +26,5 @@
   npm run build
 ```
 ## Pełna funkcjonlność z
-```
-  https://github.com/DarekCich/RecipeNotebookBackend
-```
+  #### https://github.com/DarekCich/RecipeNotebookBackend
 

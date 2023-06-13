@@ -8,3 +8,25 @@
   - edytowania
   - publikowania przepisów kulinarnych.
 
+# Konfiguracja
+## Pobranie
+```
+  git clone https://github.com/DarekCich/RecipeNotebook
+```
+## Instalacja
+```
+  npm install
+```
+## Uruchomienie
+```
+  npm start
+```
+## Zbudowanie
+```
+  npm run build
+```
+## Pełna funkcjonlność z
+```
+  https://github.com/DarekCich/RecipeNotebookBackend
+```
+
